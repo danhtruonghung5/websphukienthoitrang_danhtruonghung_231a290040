@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chi tiết sản phẩm - WSH Fashion">
+    <title>Chi Tiết Sản Phẩm - WSH Fashion</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Top Bar -->
+    <div class="header-top">
+        <div class="container">
+            <div class="header-top-left">
+                <span><i class="fas fa-phone-alt"></i> Hotline: 1900 1234</span>
+                <span><i class="fas fa-envelope"></i> support@wsh.vn</span>
+            </div>
+            <div class="header-top-right">
+                <a href="#">Theo dõi đơn hàng</a>
+                <span>|</span>
+                <a href="#">Hỗ trợ</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="header">
+        <div class="header-main">
+            <div class="container">
+                <!-- Mobile Toggle -->
+                <button class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <span>WSH</span> Fashion
+                </a>
+
+                <!-- Search Bar -->
+                <form class="search-bar">
+                    <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                    <button type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+
+                <!-- Header Icons -->
+                <div class="header-icons">
+                    <a href="#" class="header-icon">
+                        <i class="far fa-heart"></i>
+                        <span>Yêu thích</span>
+                    </a>
+                    <a href="checkout.html" class="header-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Giỏ hàng</span>
+                        <span class="badge cart-badge">0</span>
+                    </a>
+                    <a href="#" class="header-icon">
+                        <i class="far fa-user"></i>
+                        <span>Tài khoản</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="container">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="products.html" class="nav-link active">Sản phẩm <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="products.html?category=ao"><i class="fas fa-tshirt"></i> Áo</a>
+                            <a href="products.html?category=quan"><i class="fas fa-user-tie"></i> Quần</a>
+                            <a href="products.html?category=giay"><i class="fas fa-shoe-prints"></i> Giày dép</a>
+                            <a href="products.html?category=phukien"><i class="fas fa-glasses"></i> Phụ kiện</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="products.html?badge=new" class="nav-link">Hàng mới</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="products.html?badge=sale" class="nav-link">Khuyến mãi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#news-section" class="nav-link">Tin tức</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#footer" class="nav-link">Liên hệ</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Page Header -->
+    <section class="page-header" style="padding: 30px 0;">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Trang chủ</a>
+                <span>/</span>
+                <a href="products.html">Sản phẩm</a>
+                <span>/</span>
+                <span>Chi tiết sản phẩm</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail">
+        <div class="container">
+            <div class="product-detail-grid">
+                <!-- Product Gallery -->
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <img id="main-product-image" src="" alt="Product Image">
+                    </div>
+                    <div class="thumbnail-images" id="thumbnail-images">
+                        <!-- Thumbnails will be rendered by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-detail-info">
+                    <h1 id="product-name">Đang tải...</h1>
+                    
+                    <div class="product-detail-rating" id="product-rating">
+                        <!-- Rating will be rendered by JavaScript -->
+                    </div>
+
+                    <div class="product-detail-price" id="product-price">
+                        <!-- Price will be rendered by JavaScript -->
+                    </div>
+
+                    <div class="product-description" id="product-description">
+                        <!-- Description will be rendered by JavaScript -->
+                    </div>
+
+                    <div class="product-options">
+                        <!-- Size Selection -->
+                        <div class="option-group">
+                            <label>Kích thước:</label>
+                            <div class="size-options" id="size-options">
+                                <!-- Sizes will be rendered by JavaScript -->
+                            </div>
+                        </div>
+
+                        <!-- Color Selection -->
+                        <div class="option-group">
+                            <label>Màu sắc:</label>
+                            <div class="color-options" id="color-options">
+                                <!-- Colors will be rendered by JavaScript -->
+                            </div>
+                        </div>
+
+                        <!-- Quantity -->
+                        <div class="option-group">
+                            <label>Số lượng:</label>
+                            <div class="quantity-selector">
+                                <button class="qty-btn" id="qty-minus">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <input type="number" class="qty-input" id="qty-input" value="1" min="1" max="99">
+                                <button class="qty-btn" id="qty-plus">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="action-buttons">
+                        <button class="btn btn-buy-now btn-click-effect" id="buy-now-btn">
+                            <i class="fas fa-bolt"></i>
+                            Mua hàng ngay
+                        </button>
+                        <button class="btn btn-add-cart btn-click-effect" id="add-to-cart-btn">
+                            <i class="fas fa-cart-plus"></i>
+                            Thêm vào giỏ hàng
+                        </button>
+                    </div>
+
+                    <!-- Additional Info -->
+                    <div style="margin-top: 30px; padding: 20px; background: var(--bg-light); border-radius: var(--border-radius);">
+                        <div style="display: flex; gap: 30px; flex-wrap: wrap;">
+                            <div style="display: flex; align-items: center; gap: 10px;">
+                                <i class="fas fa-shield-alt" style="color: var(--primary-color); font-size: 20px;"></i>
+                                <span>Bảo hành 30 ngày</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 10px;">
+                                <i class="fas fa-truck" style="color: var(--primary-color); font-size: 20px;"></i>
+                                <span>Freeship đơn từ 500K</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 10px;">
+                                <i class="fas fa-undo" style="color: var(--primary-color); font-size: 20px;"></i>
+                                <span>Đổi trả miễn phí</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Products -->
+            <div class="related-products">
+                <div class="section-header">
+                    <h2>Sản Phẩm Liên Quan</h2>
+                    <p>Những sản phẩm bạn có thể quan tâm</p>
+                </div>
+                <div class="products-grid" id="related-products">
+                    <!-- Related products will be rendered by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- About -->
+                <div class="footer-about">
+                    <a href="index.html" class="logo">
+                        <span>WSH</span> Fashion
+                    </a>
+                    <p>WSH Fashion - Thương hiệu thời trang hàng đầu Việt Nam. Chúng tôi mang đến những sản phẩm chất lượng cao với phong cách hiện đại, phù hợp với mọi đối tượng khách hàng.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-links-section">
+                    <h3 class="footer-title">Liên Kết</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="products.html">Sản phẩm</a></li>
+                        <li><a href="#">Về chúng tôi</a></li>
+                        <li><a href="#">Tin tức</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Policies -->
+                <div class="footer-links-section">
+                    <h3 class="footer-title">Chính Sách</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Chính sách vận chuyển</a></li>
+                        <li><a href="#">Chính sách đổi trả</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Điều khoản dịch vụ</a></li>
+                        <li><a href="#">Hướng dẫn mua hàng</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-contact-section">
+                    <h3 class="footer-title">Liên Hệ</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>1900 1234 (8:00 - 22:00)</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>support@wsh.vn</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 WSH Fashion. Tất cả quyền được bảo lưu. | Thiết kế bởi DanhTruongHung</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Toast Container -->
+    <div class="toast-container"></div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/product-detail.js"></script>
+</body>
+</html>
