@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Danh sách sản phẩm thời trang WSH Fashion">
+    <title>Sản Phẩm - WSH Fashion</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Top Bar -->
+    <div class="header-top">
+        <div class="container">
+            <div class="header-top-left">
+                <span><i class="fas fa-phone-alt"></i> Hotline: 1900 1234</span>
+                <span><i class="fas fa-envelope"></i> support@wsh.vn</span>
+            </div>
+            <div class="header-top-right">
+                <a href="#">Theo dõi đơn hàng</a>
+                <span>|</span>
+                <a href="#">Hỗ trợ</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="header">
+        <div class="header-main">
+            <div class="container">
+                <!-- Mobile Toggle -->
+                <button class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <span>WSH</span> Fashion
+                </a>
+
+                <!-- Search Bar -->
+                <form class="search-bar">
+                    <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                    <button type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+
+                <!-- Header Icons -->
+                <div class="header-icons">
+                    <a href="#" class="header-icon">
+                        <i class="far fa-heart"></i>
+                        <span>Yêu thích</span>
+                    </a>
+                    <a href="checkout.html" class="header-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Giỏ hàng</span>
+                        <span class="badge cart-badge">0</span>
+                    </a>
+                    <a href="#" class="header-icon">
+                        <i class="far fa-user"></i>
+                        <span>Tài khoản</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="container">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="products.html" class="nav-link active">Sản phẩm <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="products.html?category=ao"><i class="fas fa-tshirt"></i> Áo</a>
+                            <a href="products.html?category=quan"><i class="fas fa-user-tie"></i> Quần</a>
+                            <a href="products.html?category=giay"><i class="fas fa-shoe-prints"></i> Giày dép</a>
+                            <a href="products.html?category=phukien"><i class="fas fa-glasses"></i> Phụ kiện</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="products.html?badge=new" class="nav-link">Hàng mới</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="products.html?badge=sale" class="nav-link">Khuyến mãi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#news-section" class="nav-link">Tin tức</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#footer" class="nav-link">Liên hệ</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Sản Phẩm</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Trang chủ</a>
+                <span>/</span>
+                <span>Sản phẩm</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Page Content -->
+    <div class="container">
+        <div class="products-page">
+            <!-- Sidebar Filters -->
+            <aside class="sidebar">
+                <!-- Category Filter -->
+                <div class="filter-section">
+                    <h3 class="filter-title">
+                        <i class="fas fa-list"></i>
+                        Danh Mục
+                    </h3>
+                    <ul class="filter-list">
+                        <li>
+                            <label>
+                                <input type="checkbox" class="category-filter" data-category="ao">
+                                <span>Áo</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="category-filter" data-category="quan">
+                                <span>Quần</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="category-filter" data-category="giay">
+                                <span>Giày dép</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" class="category-filter" data-category="phukien">
+                                <span>Phụ kiện</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Price Filter -->
+                <div class="filter-section">
+                    <h3 class="filter-title">
+                        <i class="fas fa-tag"></i>
+                        Khoảng Giá
+                    </h3>
+                    <div class="price-range">
+                        <div class="price-inputs">
+                            <input type="number" id="price-min" placeholder="Từ" value="0">
+                            <span>-</span>
+                            <input type="number" id="price-max" placeholder="Đến" value="2000000">
+                        </div>
+                        <input type="range" class="price-slider" id="price-slider" min="0" max="2000000" value="2000000" step="50000">
+                        <div style="display: flex; justify-content: space-between; font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+                            <span>0đ</span>
+                            <span>2.000.000đ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filter Buttons -->
+                <div class="filter-section">
+                    <button class="filter-btn" id="apply-filter">
+                        <i class="fas fa-filter"></i> Áp dụng bộ lọc
+                    </button>
+                    <button class="filter-btn" id="reset-filter" style="background: var(--text-light); margin-top: 10px;">
+                        <i class="fas fa-undo"></i> Đặt lại
+                    </button>
+                </div>
+
+                <!-- Size Filter -->
+                <div class="filter-section">
+                    <h3 class="filter-title">
+                        <i class="fas fa-ruler"></i>
+                        Kích Thước
+                    </h3>
+                    <div class="size-options" style="flex-wrap: wrap; gap: 10px;">
+                        <button class="size-btn">S</button>
+                        <button class="size-btn">M</button>
+                        <button class="size-btn">L</button>
+                        <button class="size-btn">XL</button>
+                        <button class="size-btn">XXL</button>
+                    </div>
+                </div>
+
+                <!-- Color Filter -->
+                <div class="filter-section">
+                    <h3 class="filter-title">
+                        <i class="fas fa-palette"></i>
+                        Màu Sắc
+                    </h3>
+                    <div class="color-options" style="flex-wrap: wrap; gap: 10px;">
+                        <button class="color-btn" style="background: #000000;" title="Đen"></button>
+                        <button class="color-btn" style="background: #ffffff; border: 1px solid #ddd;" title="Trắng"></button>
+                        <button class="color-btn" style="background: #2196F3;" title="Xanh dương"></button>
+                        <button class="color-btn" style="background: #1e3a5f;" title="Xanh navy"></button>
+                        <button class="color-btn" style="background: #808080;" title="Xám"></button>
+                        <button class="color-btn" style="background: #c9a86c;" title="Be"></button>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Products Main Content -->
+            <main class="products-main">
+                <!-- Products Header -->
+                <div class="products-header">
+                    <p class="products-count" id="products-count">Hiển thị <strong>0</strong> sản phẩm</p>
+                    <select class="sort-select" id="sort-select">
+                        <option value="default">Sắp xếp mặc định</option>
+                        <option value="price-asc">Giá: Thấp đến cao</option>
+                        <option value="price-desc">Giá: Cao đến thấp</option>
+                        <option value="name-asc">Tên: A-Z</option>
+                        <option value="name-desc">Tên: Z-A</option>
+                        <option value="rating">Đánh giá cao nhất</option>
+                    </select>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="products-grid" id="products-container">
+                    <!-- Products will be rendered by JavaScript -->
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- About -->
+                <div class="footer-about">
+                    <a href="index.html" class="logo">
+                        <span>WSH</span> Fashion
+                    </a>
+                    <p>WSH Fashion - Thương hiệu thời trang hàng đầu Việt Nam. Chúng tôi mang đến những sản phẩm chất lượng cao với phong cách hiện đại, phù hợp với mọi đối tượng khách hàng.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-links-section">
+                    <h3 class="footer-title">Liên Kết</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="products.html">Sản phẩm</a></li>
+                        <li><a href="#">Về chúng tôi</a></li>
+                        <li><a href="#">Tin tức</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Policies -->
+                <div class="footer-links-section">
+                    <h3 class="footer-title">Chính Sách</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Chính sách vận chuyển</a></li>
+                        <li><a href="#">Chính sách đổi trả</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Điều khoản dịch vụ</a></li>
+                        <li><a href="#">Hướng dẫn mua hàng</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-contact-section">
+                    <h3 class="footer-title">Liên Hệ</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>1900 1234 (8:00 - 22:00)</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>support@wsh.vn</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 WSH Fashion. Tất cả quyền được bảo lưu. | Thiết kế bởi DanhTruongHung</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Toast Container -->
+    <div class="toast-container"></div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>

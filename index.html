@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WSH Fashion - Thời trang nam nữ cao cấp, phong cách hiện đại">
+    <title>WSH Fashion - Thời Trang Cao Cấp</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Top Bar -->
+    <div class="header-top">
+        <div class="container">
+            <div class="header-top-left">
+                <span><i class="fas fa-phone-alt"></i> Hotline: 1900 1234</span>
+                <span><i class="fas fa-envelope"></i> support@wsh.vn</span>
+            </div>
+            <div class="header-top-right">
+                <a href="#">Theo dõi đơn hàng</a>
+                <span>|</span>
+                <a href="#">Hỗ trợ</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="header">
+        <div class="header-main">
+            <div class="container">
+                <!-- Mobile Toggle -->
+                <button class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <span>WSH</span> Fashion
+                </a>
+
+                <!-- Search Bar -->
+                <form class="search-bar">
+                    <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                    <button type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+
+                <!-- Header Icons -->
+                <div class="header-icons">
+                    <a href="#" class="header-icon">
+                        <i class="far fa-heart"></i>
+                        <span>Yêu thích</span>
+                    </a>
+                    <a href="checkout.html" class="header-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Giỏ hàng</span>
+                        <span class="badge cart-badge">0</span>
+                    </a>
+                    <a href="#" class="header-icon">
+                        <i class="far fa-user"></i>
+                        <span>Tài khoản</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="container">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="products.html" class="nav-link">Sản phẩm <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="products.html?category=ao"><i class="fas fa-tshirt"></i> Áo</a>
+                            <a href="products.html?category=quan"><i class="fas fa-user-tie"></i> Quần</a>
+                            <a href="products.html?category=giay"><i class="fas fa-shoe-prints"></i> Giày dép</a>
+                            <a href="products.html?category=phukien"><i class="fas fa-glasses"></i> Phụ kiện</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="products.html?badge=new" class="nav-link">Hàng mới</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="products.html?badge=sale" class="nav-link">Khuyến mãi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#news-section" class="nav-link">Tin tức</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#footer" class="nav-link">Liên hệ</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Hero Slider -->
+    <section class="hero-slider">
+        <div class="slider-wrapper">
+            <!-- Slide 1 -->
+            <div class="slide" style="background: linear-gradient(135deg, #2196F3 0%, #1565C0 100%);">
+                <div class="slide-content">
+                    <h1>Bộ Sưu Tập Mùa Hè 2026</h1>
+                    <p>Khám phá những xu hướng thời trang mới nhất với chất lượng cao cấp và phong cách hiện đại</p>
+                    <a href="products.html" class="btn btn-primary">Mua sắm ngay</a>
+                </div>
+                <img src="assets/img/slider1.jpg" alt="Summer Collection" class="slide-image">
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="slide" style="background: linear-gradient(135deg, #1976D2 0%, #0D47A1 100%);">
+                <div class="slide-content">
+                    <h1>Giảm Giá Đến 50%</h1>
+                    <p>Cơ hội sở hữu những sản phẩm yêu thích với mức giá ưu đãi đặc biệt</p>
+                    <a href="products.html?badge=sale" class="btn btn-primary">Xem ngay</a>
+                </div>
+                <img src="assets/img/slider2.jpg" alt="Sale" class="slide-image">
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="slide" style="background: linear-gradient(135deg, #42A5F5 0%, #1E88E5 100%);">
+                <div class="slide-content">
+                    <h1>Phong Cách Riêng Của Bạn</h1>
+                    <p>Tự tin thể hiện cá tính với những trang phục độc đáo từ WSH Fashion</p>
+                    <a href="products.html?badge=new" class="btn btn-primary">Khám phá</a>
+                </div>
+                <img src="assets/img/slider3.jpg" alt="Style" class="slide-image">
+            </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <div class="slider-controls">
+            <span class="slider-dot active"></span>
+            <span class="slider-dot"></span>
+            <span class="slider-dot"></span>
+        </div>
+
+        <!-- Slider Arrows -->
+        <button class="slider-arrow prev">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="slider-arrow next">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header" data-aos>
+                <h2>Sản Phẩm Nổi Bật</h2>
+                <p>Những sản phẩm được yêu thích nhất với ưu đãi hấp dẫn</p>
+            </div>
+            <div class="products-grid" id="featured-products" data-aos>
+                <!-- Products will be rendered by JavaScript -->
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="products.html?badge=sale" class="btn btn-blue">Xem tất cả</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Banner -->
+    <section class="section" style="background: var(--bg-light);">
+        <div class="container">
+            <div class="section-header" data-aos>
+                <h2>Danh Mục Sản Phẩm</h2>
+                <p>Khám phá đa dạng các danh mục thời trang</p>
+            </div>
+            <div class="products-grid" data-aos>
+                <a href="products.html?category=ao" class="category-card" style="position: relative; display: block; border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--shadow);">
+                    <img src="assets/img/category-ao.jpg" alt="Áo" style="width: 100%; height: 250px; object-fit: cover; transition: var(--transition);">
+                    <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.8)); padding: 30px 20px 20px; color: white;">
+                        <h3 style="font-size: 24px; margin-bottom: 5px;">Áo</h3>
+                        <span>50+ sản phẩm</span>
+                    </div>
+                </a>
+                <a href="products.html?category=quan" class="category-card" style="position: relative; display: block; border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--shadow);">
+                    <img src="assets/img/category-quan.jpg" alt="Quần" style="width: 100%; height: 250px; object-fit: cover; transition: var(--transition);">
+                    <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.8)); padding: 30px 20px 20px; color: white;">
+                        <h3 style="font-size: 24px; margin-bottom: 5px;">Quần</h3>
+                        <span>40+ sản phẩm</span>
+                    </div>
+                </a>
+                <a href="products.html?category=giay" class="category-card" style="position: relative; display: block; border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--shadow);">
+                    <img src="assets/img/category-giay.jpg" alt="Giày dép" style="width: 100%; height: 250px; object-fit: cover; transition: var(--transition);">
+                    <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.8)); padding: 30px 20px 20px; color: white;">
+                        <h3 style="font-size: 24px; margin-bottom: 5px;">Giày Dép</h3>
+                        <span>30+ sản phẩm</span>
+                    </div>
+                </a>
+                <a href="products.html?category=phukien" class="category-card" style="position: relative; display: block; border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--shadow);">
+                    <img src="assets/img/category-phukien.jpg" alt="Phụ kiện" style="width: 100%; height: 250px; object-fit: cover; transition: var(--transition);">
+                    <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.8)); padding: 30px 20px 20px; color: white;">
+                        <h3 style="font-size: 24px; margin-bottom: 5px;">Phụ Kiện</h3>
+                        <span>25+ sản phẩm</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Arrivals Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header" data-aos>
+                <h2>Sản Phẩm Mới Về</h2>
+                <p>Cập nhật những xu hướng thời trang mới nhất</p>
+            </div>
+            <div class="products-grid" id="new-products" data-aos>
+                <!-- Products will be rendered by JavaScript -->
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="products.html?badge=new" class="btn btn-blue">Xem tất cả</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="section" style="background: var(--bg-light);" id="news-section">
+        <div class="container">
+            <div class="section-header" data-aos>
+                <h2>Tin Tức Thời Trang</h2>
+                <p>Cập nhật những xu hướng và mẹo thời trang mới nhất</p>
+            </div>
+            <div class="news-grid" data-aos>
+                <!-- News Card 1 -->
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="assets/img/news1.jpg" alt="News 1">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span><i class="far fa-calendar"></i> 28/02/2026</span>
+                            <span><i class="far fa-user"></i> Admin</span>
+                        </div>
+                        <h3 class="news-title">
+                            <a href="#">Xu Hướng Thời Trang Mùa Hè 2026</a>
+                        </h3>
+                        <p class="news-excerpt">
+                            Khám phá những xu hướng thời trang nổi bật nhất trong mùa hè năm nay. Từ tông màu pastel nhẹ nhàng đến những họa tiết tropical sống động...
+                        </p>
+                        <a href="#" class="read-more">
+                            Đọc thêm <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- News Card 2 -->
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="assets/img/news2.jpg" alt="News 2">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span><i class="far fa-calendar"></i> 25/02/2026</span>
+                            <span><i class="far fa-user"></i> Style Team</span>
+                        </div>
+                        <h3 class="news-title">
+                            <a href="#">Cách Phối Đồ Công Sở Thanh Lịch</a>
+                        </h3>
+                        <p class="news-excerpt">
+                            Hướng dẫn chi tiết cách mix & match trang phục công sở vừa chuyên nghiệp vừa thời thượng. Những bí quyết để luôn tỏa sáng nơi làm việc...
+                        </p>
+                        <a href="#" class="read-more">
+                            Đọc thêm <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- News Card 3 -->
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="assets/img/news3.jpg" alt="News 3">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span><i class="far fa-calendar"></i> 22/02/2026</span>
+                            <span><i class="far fa-user"></i> Fashion Expert</span>
+                        </div>
+                        <h3 class="news-title">
+                            <a href="#">Bảo Quản Quần Áo Đúng Cách</a>
+                        </h3>
+                        <p class="news-excerpt">
+                            Những mẹo hay giúp bảo quản quần áo luôn như mới. Từ cách giặt, phơi đến cách bảo quản theo từng loại chất liệu vải khác nhau...
+                        </p>
+                        <a href="#" class="read-more">
+                            Đọc thêm <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="section reviews-section">
+        <div class="container">
+            <div class="section-header" data-aos>
+                <h2>Khách Hàng Nói Gì</h2>
+                <p>Những đánh giá chân thực từ khách hàng của chúng tôi</p>
+            </div>
+            <div class="reviews-slider" data-aos>
+                <div class="reviews-wrapper">
+                    <!-- Review 1 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="assets/img/avatar1.jpg" alt="Customer 1" class="review-avatar">
+                            <div class="review-user">
+                                <h4>Nguyễn Văn Minh</h4>
+                                <span>Khách hàng VIP</span>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">
+                            "Sản phẩm chất lượng tuyệt vời, giao hàng nhanh chóng. Tôi rất hài lòng với dịch vụ của WSH Fashion. Chắc chắn sẽ quay lại ủng hộ!"
+                        </p>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="assets/img/avatar2.jpg" alt="Customer 2" class="review-avatar">
+                            <div class="review-user">
+                                <h4>Trần Thị Hương</h4>
+                                <span>Khách hàng thân thiết</span>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="review-text">
+                            "Mình đã mua nhiều lần ở đây, lần nào cũng rất ưng ý. Áo quần đẹp, giá cả phải chăng, nhân viên tư vấn nhiệt tình. 10 điểm!"
+                        </p>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="assets/img/avatar3.jpg" alt="Customer 3" class="review-avatar">
+                            <div class="review-user">
+                                <h4>Lê Hoàng Nam</h4>
+                                <span>Khách hàng mới</span>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">
+                            "Lần đầu mua hàng online mà cảm thấy an tâm như vậy. Đóng gói cẩn thận, sản phẩm đúng như mô tả. Sẽ giới thiệu cho bạn bè!"
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust-section">
+        <div class="container">
+            <div class="trust-grid" data-aos>
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h4>Giao Hàng Nhanh</h4>
+                    <p>Giao hàng trong 2-3 ngày toàn quốc</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h4>Freeship</h4>
+                    <p>Miễn phí vận chuyển đơn từ 500K</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-undo-alt"></i>
+                    </div>
+                    <h4>Đổi Trả Dễ Dàng</h4>
+                    <p>Đổi trả miễn phí trong 30 ngày</p>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h4>Hỗ Trợ 24/7</h4>
+                    <p>Tư vấn nhiệt tình mọi lúc</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- About -->
+                <div class="footer-about">
+                    <a href="index.html" class="logo">
+                        <span>WSH</span> Fashion
+                    </a>
+                    <p>WSH Fashion - Thương hiệu thời trang hàng đầu Việt Nam. Chúng tôi mang đến những sản phẩm chất lượng cao với phong cách hiện đại, phù hợp với mọi đối tượng khách hàng.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-links-section">
+                    <h3 class="footer-title">Liên Kết</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="products.html">Sản phẩm</a></li>
+                        <li><a href="#">Về chúng tôi</a></li>
+                        <li><a href="#">Tin tức</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Policies -->
+                <div class="footer-links-section">
+                    <h3 class="footer-title">Chính Sách</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Chính sách vận chuyển</a></li>
+                        <li><a href="#">Chính sách đổi trả</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Điều khoản dịch vụ</a></li>
+                        <li><a href="#">Hướng dẫn mua hàng</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-contact-section">
+                    <h3 class="footer-title">Liên Hệ</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>1900 1234 (8:00 - 22:00)</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>support@wsh.vn</span>
+                        </li>
+                    </ul>
+                    <div class="footer-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4194164779147!2d106.70232307589949!3d10.77823458937515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f4670702e31%3A0xa5777fb3853a2f39!2zMTIzIE5ndXnhu4VuIEh14buHLCBC4bq_biBOZ2jDqSwgUXXhuq1uIDEsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1709283847123!5m2!1svi!2s" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 WSH Fashion. Tất cả quyền được bảo lưu. | Thiết kế bởi DanhTruongHung</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Toast Container -->
+    <div class="toast-container"></div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

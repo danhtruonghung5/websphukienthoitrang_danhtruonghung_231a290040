@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Giỏ hàng và Thanh toán - WSH Fashion">
+    <title>Giỏ Hàng & Thanh Toán - WSH Fashion</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+        }
+        
+        .quantity-mini {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--bg-light);
+            padding: 5px 10px;
+            border-radius: var(--border-radius);
+        }
+        
+        .qty-mini-btn {
+            width: 28px;
+            height: 28px;
+            background: var(--secondary-color);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            transition: var(--transition);
+        }
+        
+        .qty-mini-btn:hover {
+            background: var(--primary-color);
+            color: var(--secondary-color);
+        }
+        
+        .payment-methods {
+            margin-top: 20px;
+        }
+        
+        .payment-method {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            border: 2px solid var(--border-color);
+            border-radius: var(--border-radius);
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .payment-method:hover {
+            border-color: var(--primary-color);
+        }
+        
+        .payment-method.selected {
+            border-color: var(--primary-color);
+            background: rgba(33, 150, 243, 0.05);
+        }
+        
+        .payment-method input[type="radio"] {
+            accent-color: var(--primary-color);
+            width: 20px;
+            height: 20px;
+        }
+        
+        .payment-method-icon {
+            font-size: 24px;
+            color: var(--primary-color);
+        }
+        
+        .payment-method-info h4 {
+            font-size: 16px;
+            margin-bottom: 3px;
+        }
+        
+        .payment-method-info p {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Top Bar -->
+    <div class="header-top">
+        <div class="container">
+            <div class="header-top-left">
+                <span><i class="fas fa-phone-alt"></i> Hotline: 1900 1234</span>
+                <span><i class="fas fa-envelope"></i> support@wsh.vn</span>
+            </div>
+            <div class="header-top-right">
+                <a href="#">Theo dõi đơn hàng</a>
+                <span>|</span>
+                <a href="#">Hỗ trợ</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="header">
+        <div class="header-main">
+            <div class="container">
+                <!-- Mobile Toggle -->
+                <button class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <span>WSH</span> Fashion
+                </a>
+
+                <!-- Search Bar -->
+                <form class="search-bar">
+                    <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                    <button type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+
+                <!-- Header Icons -->
+                <div class="header-icons">
+                    <a href="#" class="header-icon">
+                        <i class="far fa-heart"></i>
+                        <span>Yêu thích</span>
+                    </a>
+                    <a href="checkout.html" class="header-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Giỏ hàng</span>
+                        <span class="badge cart-badge">0</span>
+                    </a>
+                    <a href="#" class="header-icon">
+                        <i class="far fa-user"></i>
+                        <span>Tài khoản</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="container">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="products.html" class="nav-link">Sản phẩm <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="products.html?category=ao"><i class="fas fa-tshirt"></i> Áo</a>
+                            <a href="products.html?category=quan"><i class="fas fa-user-tie"></i> Quần</a>
+                            <a href="products.html?category=giay"><i class="fas fa-shoe-prints"></i> Giày dép</a>
+                            <a href="products.html?category=phukien"><i class="fas fa-glasses"></i> Phụ kiện</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="products.html?badge=new" class="nav-link">Hàng mới</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="products.html?badge=sale" class="nav-link">Khuyến mãi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#news-section" class="nav-link">Tin tức</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#footer" class="nav-link">Liên hệ</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Giỏ Hàng & Thanh Toán</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Trang chủ</a>
+                <span>/</span>
+                <span>Thanh toán</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checkout Page Content -->
+    <section class="checkout-page">
+        <div class="container">
+            <div class="checkout-grid">
+                <!-- Checkout Form -->
+                <div class="checkout-form">
+                    <form id="checkout-form">
+                        <h2><i class="fas fa-map-marker-alt"></i> Thông Tin Giao Hàng</h2>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullname">Họ và tên <span>*</span></label>
+                                <input type="text" id="fullname" name="fullname" placeholder="Nhập họ và tên">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Số điện thoại <span>*</span></label>
+                                <input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email <span>*</span></label>
+                            <input type="email" id="email" name="email" placeholder="Nhập địa chỉ email">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="province">Tỉnh/Thành phố <span>*</span></label>
+                                <select id="province" name="province">
+                                    <option value="">Chọn Tỉnh/Thành phố</option>
+                                    <option value="hcm">TP. Hồ Chí Minh</option>
+                                    <option value="hn">Hà Nội</option>
+                                    <option value="dn">Đà Nẵng</option>
+                                    <option value="hp">Hải Phòng</option>
+                                    <option value="ct">Cần Thơ</option>
+                                    <option value="bd">Bình Dương</option>
+                                    <option value="dn">Đồng Nai</option>
+                                    <option value="other">Tỉnh/Thành khác</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="district">Quận/Huyện</label>
+                                <select id="district" name="district">
+                                    <option value="">Chọn Quận/Huyện</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">Địa chỉ chi tiết <span>*</span></label>
+                            <input type="text" id="address" name="address" placeholder="Số nhà, tên đường, phường/xã">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="note">Ghi chú đơn hàng</label>
+                            <textarea id="note" name="note" placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn"></textarea>
+                        </div>
+
+                        <!-- Payment Methods -->
+                        <h2 style="margin-top: 30px;"><i class="fas fa-credit-card"></i> Phương Thức Thanh Toán</h2>
+                        
+                        <div class="payment-methods">
+                            <label class="payment-method selected">
+                                <input type="radio" name="payment" value="cod" checked>
+                                <i class="fas fa-money-bill-wave payment-method-icon"></i>
+                                <div class="payment-method-info">
+                                    <h4>Thanh toán khi nhận hàng (COD)</h4>
+                                    <p>Thanh toán bằng tiền mặt khi nhận hàng</p>
+                                </div>
+                            </label>
+                            
+                            <label class="payment-method">
+                                <input type="radio" name="payment" value="bank">
+                                <i class="fas fa-university payment-method-icon"></i>
+                                <div class="payment-method-info">
+                                    <h4>Chuyển khoản ngân hàng</h4>
+                                    <p>Chuyển khoản qua tài khoản ngân hàng</p>
+                                </div>
+                            </label>
+                            
+                            <label class="payment-method">
+                                <input type="radio" name="payment" value="momo">
+                                <i class="fas fa-wallet payment-method-icon" style="color: #A50064;"></i>
+                                <div class="payment-method-info">
+                                    <h4>Ví MoMo</h4>
+                                    <p>Thanh toán qua ví điện tử MoMo</p>
+                                </div>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="order-summary">
+                    <h2><i class="fas fa-shopping-bag"></i> Đơn Hàng Của Bạn</h2>
+                    
+                    <!-- Free Shipping Progress -->
+                    <div id="free-shipping-progress" style="margin-bottom: 20px; padding: 15px; background: var(--bg-light); border-radius: var(--border-radius);">
+                        <!-- Will be updated by JavaScript -->
+                    </div>
+
+                    <!-- Cart Items -->
+                    <div class="cart-items" id="cart-items">
+                        <!-- Cart items will be rendered by JavaScript -->
+                    </div>
+
+                    <!-- Order Totals -->
+                    <div class="order-totals">
+                        <div class="total-row">
+                            <span>Tạm tính:</span>
+                            <span id="subtotal">0đ</span>
+                        </div>
+                        <div class="total-row">
+                            <span>Phí vận chuyển:</span>
+                            <span id="shipping">0đ</span>
+                        </div>
+                        <div class="total-row">
+                            <span>VAT (10%):</span>
+                            <span id="vat">0đ</span>
+                        </div>
+                        <div class="total-row grand-total">
+                            <span>Tổng cộng:</span>
+                            <span id="grand-total">0đ</span>
+                        </div>
+                    </div>
+
+                    <!-- Checkout Button -->
+                    <button type="submit" form="checkout-form" class="checkout-btn" id="submit-order">
+                        <i class="fas fa-lock"></i>
+                        Xác Nhận Thanh Toán
+                    </button>
+
+                    <!-- Security Info -->
+                    <div style="margin-top: 20px; text-align: center;">
+                        <p style="font-size: 13px; color: var(--text-muted);">
+                            <i class="fas fa-shield-alt" style="color: var(--success-color);"></i>
+                            Thanh toán an toàn & bảo mật
+                        </p>
+                    </div>
+
+                    <!-- Continue Shopping -->
+                    <a href="products.html" style="display: block; text-align: center; margin-top: 15px; color: var(--primary-color); font-weight: 600;">
+                        <i class="fas fa-arrow-left"></i> Tiếp tục mua sắm
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- About -->
+                <div class="footer-about">
+                    <a href="index.html" class="logo">
+                        <span>WSH</span> Fashion
+                    </a>
+                    <p>WSH Fashion - Thương hiệu thời trang hàng đầu Việt Nam. Chúng tôi mang đến những sản phẩm chất lượng cao với phong cách hiện đại, phù hợp với mọi đối tượng khách hàng.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-links-section">
+                    <h3 class="footer-title">Liên Kết</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="products.html">Sản phẩm</a></li>
+                        <li><a href="#">Về chúng tôi</a></li>
+                        <li><a href="#">Tin tức</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Policies -->
+                <div class="footer-links-section">
+                    <h3 class="footer-title">Chính Sách</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Chính sách vận chuyển</a></li>
+                        <li><a href="#">Chính sách đổi trả</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Điều khoản dịch vụ</a></li>
+                        <li><a href="#">Hướng dẫn mua hàng</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-contact-section">
+                    <h3 class="footer-title">Liên Hệ</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>1900 1234 (8:00 - 22:00)</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>support@wsh.vn</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 WSH Fashion. Tất cả quyền được bảo lưu. | Thiết kế bởi DanhTruongHung</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Toast Container -->
+    <div class="toast-container"></div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/checkout.js"></script>
+    
+    <script>
+        // Payment method selection
+        document.querySelectorAll('.payment-method').forEach(method => {
+            method.addEventListener('click', () => {
+                document.querySelectorAll('.payment-method').forEach(m => m.classList.remove('selected'));
+                method.classList.add('selected');
+                method.querySelector('input[type="radio"]').checked = true;
+            });
+        });
+    </script>
+</body>
+</html>
